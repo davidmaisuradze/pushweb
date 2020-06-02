@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">PushWeb</a>
+  <button class="navbar-toggler" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/']">Home</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/websites']">Websites</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/notifications']">Notifications</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a *ngIf="!(user$ | async); else logout"
+           class="nav-link"
+           href="javascript:void(0)"
+           (click)="signInWithGoogle()"
+        >
+          Log In
+        </a>
+
+        <ng-template #logout>
+          <div class="user-info">
+            <span>Hello {{(user$ | async).name}}</span>
+            <a class="nav-link"
+               href="javascript:void(0)"
+               (click)="signOutFromGoogle()"
+            >
+              Log Out
+            </a>
+          </div>
+        </ng-template>
+      </li>
+    </ul>
+  </div>
+</nav>

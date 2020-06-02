@@ -1,0 +1,41 @@
+<div class="notifications-content">
+  <button class="btn btn-primary mb-2" (click)="addNotification()">Add New Notification</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Description</th>
+      <th>URL</th>
+      <th>Sent</th>
+      <th>Failed</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody *ngIf="(notifications$ | async) as notifications">
+    <tr *ngFor="let notification of notifications"
+    >
+      <td>{{notification.title}}</td>
+      <td>{{notification.body}}</td>
+      <td>{{notification.description}}</td>
+      <td>{{notification.url}}</td>
+      <td>{{notification.statistics?.successCount}}</td>
+      <td>{{notification.statistics?.failedCount}}</td>
+      <td>
+        <fa-icon class="ml-2"
+                 [icon]="icons.send"
+                 (click)="sendNotification(notification._id, notification.title)"
+        ></fa-icon>
+        <fa-icon class="ml-2"
+                 [icon]="icons.edit"
+                 (click)="updateNotification(notification)"
+        ></fa-icon>
+        <fa-icon class="ml-2"
+                 [icon]="icons.times"
+                 (click)="removeNotification(notification._id, notification.title)"
+        ></fa-icon>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

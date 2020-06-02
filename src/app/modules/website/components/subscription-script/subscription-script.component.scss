@@ -1,0 +1,30 @@
+@import '../../../../../assets/styles/variables';
+
+.subscription-script-content {
+  .subscription-steps-list {
+  }
+  .description {
+    font-family: $fontFamilyLato;
+    font-size: 15px;
+
+    .inline {
+      color: $color-black;
+      font-weight: bold;
+    }
+  }
+  .subscription-script {
+    .block {
+      display: block;
+      position: relative;
+      margin: 16px 0;
+      border: 1px solid #E5DEE1;
+      border-radius: 8px;
+      padding: 16px 32px 16px 16px;
+      line-height: 1.4em;
+      color: #4C39DF;
+    }
+  }
+  .service-worker-link {
+    margin-top: 10px;
+  }
+}

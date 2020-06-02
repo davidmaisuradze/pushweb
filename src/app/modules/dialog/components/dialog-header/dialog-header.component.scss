@@ -1,0 +1,19 @@
+@import '../../../../../assets/styles/variables';
+
+.dialog-header {
+  display: flex;
+  font-family: $fontFamilyLato;
+  border-bottom: 1px solid $color-text-grey;
+  margin-bottom: 15px;
+
+  ::ng-deep {
+    .title {
+      display: flex;
+      flex: 1;
+      font-size: 22pt;
+      font-family: $fontFamilyLatoBold;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+  }
+}

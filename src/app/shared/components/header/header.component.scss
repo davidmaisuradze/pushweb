@@ -1,0 +1,11 @@
+@import '../../../../assets/styles/variables';
+
+.user-info{
+ display: flex;
+  align-items: center;
+
+  span {
+    color: $color-grey-medium;
+    margin-right: 10px;
+  }
+}

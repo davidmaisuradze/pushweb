@@ -1,0 +1,47 @@
+<app-dialog-content width="570">
+  <app-dialog-header [title]="this.data && this.data._id ? 'Update Website' : 'Add New Website'">
+    <app-dialog-close></app-dialog-close>
+  </app-dialog-header>
+  <div class="dialog-body">
+    <div class="add-website-content">
+      <form [formGroup]="form">
+        <input
+          *fieldSet="formFields.url"
+          formControlName="url"
+          class="form-control"
+        />
+        <input
+          *fieldSet="formFields.name"
+          formControlName="name"
+          class="form-control"
+        />
+        <input
+          *fieldSet="formFields.subscribeAutomatically"
+          type="checkbox"
+          formControlName="subscribeAutomatically"
+          class="form-control"
+        />
+        <ng-container *ngIf="!!form.get('subscribeAutomatically').value">
+          <input
+            *fieldSet="formFields.notificationTitle"
+            formControlName="notificationTitle"
+            class="form-control"
+          />
+          <input
+            *fieldSet="formFields.notificationBody"
+            formControlName="notificationBody"
+            class="form-control"
+          />
+        </ng-container>
+      </form>
+    </div>
+  </div>
+  <div class="group-button">
+    <button class="btn btn-primary" (click)="save()">
+      Add Website
+    </button>
+    <button class="btn btn-secondary" matDialogClose>
+      Cancel
+    </button>
+  </div>
+</app-dialog-content>

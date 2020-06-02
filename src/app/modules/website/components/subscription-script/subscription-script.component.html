@@ -1,0 +1,45 @@
+<app-dialog-content width="570">
+  <app-dialog-header title="Subscription Script">
+    <app-dialog-close></app-dialog-close>
+  </app-dialog-header>
+  <div class="dialog-body">
+    <div class="subscription-script-content">
+      <ol class="subscription-steps-list">
+        <li>
+          <div class="description">
+            Copy the following code snippet and paste immediately before the closing
+            <code class="inline">&lt;/body&gt;</code> tag on every page of your site.
+          </div>
+          <div class="subscription-script">
+            <code class="block" data-type="JS">
+              {{generateSubscriptionScript()}}
+            </code>
+          </div>
+        </li>
+        <li>
+          <div class="description">
+            Since your site is using the https protocol, you will want to upload a service worker file that will handle
+            your site’s notification delivery.
+            If you have access to your site’s root directory (usually via FTP), download the file below and upload it to
+            the root of your site.
+          </div>
+          <a [href]="serviceWorkerFileDownloadLink"
+             class="btn btn-primary service-worker-link"
+             target="_blank"
+          >
+            Download Service Worker File
+          </a>
+        </li>
+        <li *ngIf="!this.data.subscribeAutomatically">
+          <div class="description">
+            Place "Try Out Subscriptions" <code>button</code> with <code>id="subscribeCrazypush"</code> to show your users how subscription works
+            <br/>
+            <code>
+              &lt;button id="subscribeCrazypush"&gt;Try Out Subscriptions&lt;/button&gt;
+            </code>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</app-dialog-content>

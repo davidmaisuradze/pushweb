@@ -1,0 +1,11 @@
+.websites-content {
+  height: 80vh;
+  overflow: auto;
+  .website-item {
+    cursor: pointer;
+  }
+
+  fa-icon {
+    cursor: pointer;
+  }
+}

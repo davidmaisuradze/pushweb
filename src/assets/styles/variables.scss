@@ -1,0 +1,122 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+$fonts-path: '/assets/fonts' !default;
+
+/*white*/
+$color-white: #ffffff;
+$color-card-background: #f5f5f5;
+$color-mercury: #e5e5e5;
+$color-alabaster: #f8f8f8;
+$color-pagination-back: #f2f1ef;
+$color-disabled: #c3c3c3;
+$white-smoke: #f3f3f3;
+$explore-info-background-color: #f3f3eb;
+$product-background-color: #f7f7f7;
+$material-background-color: #d8d8d8;
+
+/*black*/
+$color-black: #000000;
+
+/*blue*/
+$color-blue-dark: #212529;
+
+/*red*/
+$color-heart-active: #532431;
+$color-light-red: #fb6255;
+
+/*green*/
+$color-new-green: #417505;
+
+/*grey*/
+$color-grey-medium: #858f95;
+$color-grey: #f5f5f5;
+$color-dim-grey: #8e8f94;
+$color-greyish-brown: #484848;
+$color-steel: #7c8186;
+$color-middle-grey: $color-greyish-brown;
+$color-light-grey: #eaeaea;
+$color-light-grayish-blue: $color-steel;
+$color-dark-grey: #272727;
+$color-pale-grey: #f0f0f0;
+$color-text-grey: #929292;
+$color-close-grey: #979797;
+$color-dusty-gray: #9b9b9b;
+
+/*golden*/
+$color-text-golden: #c3a773;
+$color-dark-gold: #bfa16a;
+$color-light-gold: #d9b777;
+
+/*widths*/
+$binderItemWidth: 300px;
+$binderItemHeight: 200px;
+$borderRadius: 3px;
+$heightControl: 40px;
+$heightButton: $heightControl;
+
+/*fonts*/
+$fontFamilyLato: 'Lato';
+$fontFamilyLatoSemibold: 'Lato Semibold';
+$fontFamilyLatoMedium: 'Lato Medium';
+$fontFamilyLatoBold: 'Lato Bold';
+$fontFamilyLatoBlack: 'Lato Black';
+$fontFamilyAwesome: 'Font Awesome 5 Free';
+$fontFamilyAwesomePro: 'Font Awesome 5 Pro';
+$fontFamilyActa: 'ActaDisplay-ExtraBoldItalic';
+$fontFamilyBebas: 'Bebas Neue Regular';
+$fontFamilyBebasBold: 'Bebas Neue Bold';
+$fontFamilyLatoLight: 'Lato Light';
+$fontFamilySweetSans: 'Sweet Sans';
+$fontFamilySweetSansLight: 'Sweet Sans Light';
+$fontFamilySweetSansMedium: 'Sweet Sans Medium';
+$fontSizeControls: 11px;
+
+$choices-caret-color: $color-alabaster;
+$choices-border-radius: $borderRadius;
+$choices-bg-color-disabled: rgb(235, 235, 228);
+$choices-multi-height: $heightControl;
+
+/*defaults*/
+$default-font: $fontFamilyLato;
+$requiredFieldColor: red;
+$requiredTextColor: $color-steel;
+$iconBtnDefault: #c0a16b;
+$iconBtnActive: #bfa16a;
+$iconBtnHovering: #d9b777;
+
+// breadcrumbs on the page "marketplace explorer"
+$ziMarketplaceBreadcrumbs: 110;
+
+// detail item hivering overlay
+$ziDetailItemHover: 10;
+$ziDetailItemActions: 11;
+$ziDetailItemConfigThumbnail: $ziDetailItemActions;
+$ziDetailItemUnreadComments: $ziDetailItemActions;
+$ziDetailItemUnavailable: 12;
+$ziRoomGroupHeader: 1;
+
+// search filter
+$searchBarWidth: 346px;
+$searchInnerWidth: 215px;
+
+$contentPadding: 43.5px;
+
+// breakpoints for screens
+$bpWidth1280: 1280px;
+$bpWidth1440: 1440px;
+$bpWidth1680: 1680px;
+
+$content-max-width: (
+  xl1440: $bpWidth1440 - 2 * $contentPadding,
+  xl1680: $bpWidth1680 - 2 * $contentPadding
+);
+
+$custom-breakpoints: (
+  xl1440: $bpWidth1440,
+  // resolution 1600px must have
+  // 5 tiles on LDP
+  xl1680: $bpWidth1680
+);
+

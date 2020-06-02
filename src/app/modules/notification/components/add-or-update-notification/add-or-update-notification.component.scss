@@ -1,0 +1,29 @@
+$content-right-padding: 25 + 'px';
+
+.add-notification-content {
+  .select-websites {
+    display: flex;
+    align-items: center;
+
+    &--checkbox {
+      width: 18px;
+      cursor: pointer;
+    }
+
+    &--label {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.group-button {
+  padding-right: $content-right-padding;
+  display: flex;
+  justify-content: flex-end;
+  & > * {
+    margin-left: 20px;
+  }
+  button.secondary {
+    background: transparent;
+  }
+}

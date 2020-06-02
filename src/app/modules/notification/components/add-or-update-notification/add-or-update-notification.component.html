@@ -1,0 +1,50 @@
+<app-dialog-content width="570">
+  <app-dialog-header [title]="this.data && this.data._id ? 'Update Notification' : 'Add New Notification'">
+    <app-dialog-close></app-dialog-close>
+  </app-dialog-header>
+  <div class="dialog-body">
+    <div class="add-notification-content">
+      <form [formGroup]="form">
+        <input
+          *fieldSet="formFields.title"
+          formControlName="title"
+          class="form-control"
+        />
+        <input
+          *fieldSet="formFields.body"
+          formControlName="body"
+          class="form-control"
+        />
+        <input
+          *fieldSet="formFields.description"
+          formControlName="description"
+          class="form-control"
+        />
+        <input
+          *fieldSet="formFields.url"
+          formControlName="url"
+          class="form-control"
+        />
+        <div *ngIf="websites$ | async as websites">
+          <div>Select Websites</div>
+          <div class="select-websites" *ngFor="let website of websites">
+            <input type="checkbox"
+                   class="form-control mr-1 select-websites--checkbox"
+                   [checked]="isChecked(website._id)"
+                   (change)="websiteSelected(website._id)"
+            />
+            <label class="select-websites--label">{{website.name}}</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="group-button">
+    <button class="btn btn-primary" (click)="save()">
+      Save
+    </button>
+    <button class="btn btn-secondary" matDialogClose>
+      Cancel
+    </button>
+  </div>
+</app-dialog-content>
